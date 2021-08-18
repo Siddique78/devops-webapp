@@ -13,8 +13,8 @@ steps:
 
 - task: AzureWebAppContainer@1 # Description what the task will execute
   inputs:
-    azureSubscription: 'devops-appservice-resource-group'
-   appName: 'appsvc_windows_centralus'
+    azureSubscription: 'devops-linux-appservice'
+   appName: 'devops-webapps-test'
    #appName: 'devops-linux-appservice'
    #appName: 'devops-webapp-test'
     containers: $(containerRegistry)/$(imageRepository):$(tag)
