@@ -13,7 +13,7 @@ steps:
 
 - task: AzureWebAppContainer@1 # Description what the task will execute
   inputs:
-    azureSubscription: 'devops-linux-appservice'
+    azureSubscription: 'devops-appservice-resource-group-new'
    appName: 'devops-webapps-test'
    #appName: 'devops-linux-appservice'
    #appName: 'devops-webapp-test'
