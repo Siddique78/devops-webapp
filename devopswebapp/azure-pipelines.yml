@@ -15,5 +15,6 @@ steps:
   inputs:
     azureSubscription: 'devops-appservice-resource-group'
    # appName: 'appsvc_windows_centralus'
-   appName: 'devops-linux-appservice'
+   #appName: 'devops-linux-appservice'
+   appName: 'https://devops-webapps-test.azurewebsites.net'
     containers: $(containerRegistry)/$(imageRepository):$(tag)
