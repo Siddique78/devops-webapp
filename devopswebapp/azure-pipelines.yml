@@ -1,8 +1,8 @@
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: devops-acr-connection
-  imageRepository: devops-course-repository
-  containerRegistry: devopscourseregistry
+  imageRepository: devopsweb1-repository
+  containerRegistry: sarfarazproject
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: 'latest'
 
@@ -14,5 +14,5 @@ steps:
 - task: AzureWebAppContainer@1 # Description what the task will execute
   inputs:
     azureSubscription: 'devops-appservice-resource-group'
-    appName: 'devops-course-webapp-test'
+    appName: 'devops-webapp-test'
     containers: $(containerRegistry)/$(imageRepository):$(tag)
